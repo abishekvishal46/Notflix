@@ -1,0 +1,70 @@
+{% include "header.html" %}
+{% include "toggle.html" %}
+
+<section class="content-row-unique">
+    <div class="marvel-logo-unique">
+        <img src="../static/images/mcu-logo.png" alt="Marvel Logo">
+    </div>
+
+    <div class="carousel-unique" data-track-id="carousel-track-unique-1">
+
+        <div class="carousel-track-unique" id="carousel-track-unique-1">
+
+            {% for movie,info in mcu.items() %}
+            <div class="card-unique" onclick="window.location.href='/movieso?movie_name={{ movie }}&movie_id={{info[1]}}'">
+                <img src="{{ info[0] }}" alt="{{ movie}}">
+            </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="content-row-unique">
+    <div class="marvel-logo-unique">
+        <img src="../static/images/dc-logo.png" alt="Marvel Logo">
+    </div>
+    <div class="carousel-unique" data-track-id="carousel-track-unique-2">
+
+        <div class="carousel-track-unique" id="carousel-track-unique-2">
+            {% for movie,info in dc.items() %}
+            <div class="card-unique" onclick="window.location.href='/movieso?movie_name={{ movie }}&movie_id={{info[1]}}'">
+                <img src="{{ info[0] }}" alt="{{ movie}}" >
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section class="content-row-unique">
+    <div class="marvel-logo-unique">
+        <img src="../static/images/hp_logo.png" alt="Marvel Logo">
+    </div>
+    <div class="carousel-unique" data-track-id="carousel-track-unique-3">
+        <div class="carousel-track-unique" id="carousel-track-unique-3">
+            {% for movie,info in hp.items() %}
+            <div class="card-unique" onclick="window.location.href='/movieso?movie_name={{ movie }}&movie_id={{info[1]}}'">
+                <img src="{{ info[0] }}" alt="{{ movie}}">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section class="content-row-unique">
+    <div class="marvel-logo-unique">
+        <img src="../static/images/poc.png" alt="Marvel Logo">
+    </div>
+    <div class="carousel-unique" data-track-id="carousel-track-unique-4">
+        <div class="carousel-track-unique" id="carousel-track-unique-4">
+            {% for movie,info in poc.items() %}
+            <div class="card-unique" onclick="window.location.href='/movieso?movie_name={{ movie }}&movie_id={{info[1]}}'">
+                <img src="{{ info[0] }}" alt="{{ movie}}">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+{% include "footer.html" %}

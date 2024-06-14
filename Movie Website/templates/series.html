@@ -1,0 +1,64 @@
+{% include "header.html" %}
+{% include "toggle.html" %}
+<section class="content-row-unique">
+<h1 >Love</h1>
+
+    <div class="carousel-unique" data-track-id="carousel-track-unique-1">
+        <div class="carousel-track-unique" id="carousel-track-unique-1">
+
+            {% for movie,info in love.items() %}
+            <div class="card-unique" onclick="window.location.href='/serieso?movie_name={{ movie }}&movie_id={{info[1]}}'">
+                <img src="{{ info[0] }}" alt="{{ movie}}">
+            </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="content-row-unique">
+<h1 >Comedy</h1>
+    <div class="carousel-unique" data-track-id="carousel-track-unique-2">
+        <div class="carousel-track-unique" id="carousel-track-unique-2">
+            {% for movie,info in comedy.items() %}
+            <div class="card-unique" onclick="window.location.href='/serieso?movie_name={{ movie }}&movie_id={{info[1]}}'">
+                <img src="{{ info[0] }}" alt="{{ movie}}" >
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section class="content-row-unique">
+<h1 >Fantasy</h1>
+    <div class="carousel-unique" data-track-id="carousel-track-unique-3">
+        <div class="carousel-track-unique" id="carousel-track-unique-3">
+            {% for movie,info in fantasy.items() %}
+            <div class="card-unique" onclick="window.location.href='/serieso?movie_name={{ movie }}&movie_id={{info[1]}}'">
+                <img src="{{ info[0] }}" alt="{{ movie}}">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section class="content-row-unique">
+<h1 >Anime</h1>
+
+    <div class="carousel-unique" data-track-id="carousel-track-unique-4">
+        <div class="carousel-track-unique" id="carousel-track-unique-4">
+
+            {% for movie,info in anime.items() %}
+            <div class="card-unique" onclick="window.location.href='/serieso?movie_name={{ movie }}&movie_id={{info[1]}}'">
+                <img src="{{ info[0] }}" alt="{{ movie}}">
+            </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+{% include "footer.html" %}

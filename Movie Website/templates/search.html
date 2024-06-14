@@ -1,0 +1,30 @@
+{% include "header.html" %}
+
+    <h1>Related Searches</h1>
+    <div class="carousel-unique" data-track-id="carousel-track-unique-3">
+        <div class="carousel-track-unique" id="carousel-track-unique-3">
+            <!-- Assuming the template language is being used to loop through search results -->
+            {% for movie, info in search_results.items() %}
+    <div class="card-unique" onclick="window.location.href='/{{info[1]}}o?movie_name={{ movie }}&movie_id={{ info[2] }}'">
+                <img src="{{ info[0] }}" alt="{{ movie }}">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <section style="margin-top: 75px;">
+        <div style="padding: 20px; text-align: center;">
+            <div style="background-color: #1f1f1f; border-radius: 10px; box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); padding: 20px; max-width: 600px; margin: 0 auto;">
+                <h2 style="font-size: 24px; margin-bottom: 10px;">Important Note</h2>
+                <p style="font-size: 16px; line-height: 1.5; margin-bottom: 15px;">If the provided movie does not match your search criteria, please consider providing the IMDb title of the movie along with its release year, formatted as "Movie Name (20xx)." This will help ensure more accurate and precise search results. Thank you for your cooperation. Still working on the searching capabilities it might lead to some mismatch.</p>
+                <p style="font-size: 16px; line-height: 1.5;">Thank you for your understanding.</p>
+                <p style="font-size: 14px; line-height: 1.2; margin-top: 20px; color: #cccccc;">If you need further assistance, please contact support at <a href="mailto:support@example.com" style="color: #ffffff;">support@example.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include the footer here if applicable -->
+    {% include "footer.html" %}
+</body>
+
+</html>
